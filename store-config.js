@@ -4,7 +4,7 @@ const ADMIN_CORS = process.env.ADMIN_CORS ||
 
 // CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS = 
-  process.env.STORE_CORS || "https://medusa-storefront-teal.vercel.app" 
+  process.env.STORE_CORS || "https://medusabackend-production-c032.up.railway.app" 
 
   function withStoreConfig(nextConfig = {}) {
     const features = nextConfig.features || {}
