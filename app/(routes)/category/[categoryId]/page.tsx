@@ -9,7 +9,9 @@ import MobileFilters from "./components/mobile-filters";
 import Filter from "./components/filter";
 import {  useProducts } from "medusa-react";
 
+import { cookies } from 'next/headers';
 
+export const runtime = 'edge';
 
 export const revalidate = 0;
 
