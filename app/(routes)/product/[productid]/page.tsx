@@ -5,7 +5,9 @@ import Info from "@/components/info"
 import Container from "@/components/ui/Container"
 import useProductStore from "@/hooks/use-product-list"
 import { useProducts } from "medusa-react"
+import { cookies } from 'next/headers';
 
+export const runtime = 'edge';
 
 interface ProductpageProps {
     params: {
