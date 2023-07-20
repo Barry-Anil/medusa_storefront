@@ -9,4 +9,5 @@ module.exports = withStoreConfig({
   images: {
     domains: ["medusa-public-images.s3.eu-west-1.amazonaws.com", "localhost", "instagram.fhyd12-1.fna.fbcdn.net"],
   },
+  target: 'serverless',
 })
