@@ -17,6 +17,13 @@ const queryClient = new QueryClient();
 
 const font = Urbanist({ subsets: ["latin"] });
 
+<<<<<<< HEAD
+=======
+// export const metadata = {
+//   title: "Store",
+//   description: "Store",
+// };
+>>>>>>> 7bfdd55c173ee132dea41d4aa508c29b84feef46
 
 export default function RootLayout({
   children,

@@ -9,4 +9,5 @@ module.exports = withStoreConfig({
   images: {
     domains: ["medusa-backend.s3.ap-south-1.amazonaws.com", "localhost", "instagram.fhyd12-1.fna.fbcdn.net"],
   },
+
 })
