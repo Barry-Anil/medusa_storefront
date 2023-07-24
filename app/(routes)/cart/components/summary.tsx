@@ -28,7 +28,7 @@ const Summary = () => {
 
   const totalPrice: any = items.reduce((total, item) => {
     console.log(item, "item")
-    return total + Number(item.variants[0].prices[0].amount)
+    return total + Number(item.variants[0]?.prices[0]?.amount)
   }, 0);
 
   //for checkout
