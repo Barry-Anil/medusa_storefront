@@ -49,7 +49,7 @@ const CartItem: React.FC<CartItemProps> = ({
             <p className="text-gray-500">Blue</p>
             <p className="ml-4 border-l border-gray-200 pl-4 text-gray-500">Large</p>
           </div>
-          <Currency value={data.variants[0].prices[0].amount} />
+          <Currency value={data.variants[0]?.prices[0].amount} />
         </div>
       </div>
     </li>
