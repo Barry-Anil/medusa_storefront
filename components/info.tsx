@@ -5,6 +5,8 @@ import { ShoppingCart } from "lucide-react";
 import { Product } from "@medusajs/medusa";
 import Currency from "./ui/Currency";
 import Button from "./ui/Button";
+import useCart from "@/hooks/use-cart";
+
 
 
 interface InfoProps {
