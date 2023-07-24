@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Plus, X } from "lucide-react";
 import { Dialog } from "@headlessui/react";
 
-import { Color, Size } from "@/types";
+// import { Color, Size } from "@/types";
 
 import Filter from "./filter";
 import IconButton from "@/components/ui/IconButton";
