@@ -18,6 +18,8 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     // cart.addItem(data);
   }
 
+  console.log(data, "info card")
+
   return ( 
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.title}</h1>
@@ -31,12 +33,12 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         <div className="flex items-center gap-x-4">
           <h3 className="font-semibold text-black">Size:</h3>
           <div>
-            {data?.size}
+            {data?.metadata?.size}
           </div>
         </div>
         <div className="flex items-center gap-x-4">
-          <h3 className="font-semibold text-black">Color:</h3>
-          <div className="h-6 w-6 rounded-full border border-gray-600" style={{ backgroundColor: data?.color }} />
+          <h3 className="font-semibold text-black">Color: </h3>
+          <div className="h-6 w-6 rounded-full border border-gray-600" style={{ backgroundColor: data?.metadata?.color }} />
         </div>
       </div>
       <div className="mt-10 flex items-center gap-x-3">

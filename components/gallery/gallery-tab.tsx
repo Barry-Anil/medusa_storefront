@@ -11,6 +11,7 @@ interface GalleryTabProps {
 const GalleryTab: React.FC<GalleryTabProps> = ({
   image
 }) => {
+  console.log(image, "image tab props")
   return ( 
     <Tab
       className="relative flex aspect-square cursor-pointer items-center justify-center rounded-md bg-white"
@@ -20,8 +21,8 @@ const GalleryTab: React.FC<GalleryTabProps> = ({
           <span className="absolute h-full w-full aspect-square inset-0 overflow-hidden rounded-md">
             <NextImage 
               fill 
-              src={image?.url} 
-              alt="" 
+              src={image} 
+              alt="images" 
               className="object-cover object-center" 
             />
           </span>

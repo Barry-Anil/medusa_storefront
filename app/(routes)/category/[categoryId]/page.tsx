@@ -40,12 +40,12 @@ const CategoryPage: React.FC<CategoryPageProps> =  ({params}) => {
       return null; // or return a loading indicator, error message, etc.
     }
     const category = products.filter(category =>  category.collection && category?.collection.title === categoryId);
+  
 
 
-
-    const sizes: any = products?.map(category => category?.metadata?.size);
-    const colors: any = products?.map(category => category?.metadata?.color);
-
+    const sizes: any = category?.map(category => category?.metadata?.size);
+    const colors: any = category?.map(category => category?.metadata?.color);
+  
 
   return (
     <div className="bg-white">

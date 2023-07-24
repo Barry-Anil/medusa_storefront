@@ -11,6 +11,8 @@ import { useProducts } from "medusa-react";
 const Navbar = () => {
   const { products } = useProducts();
 
+  console.log(products, "products for nav bar")
+
   if (!products) {
     return null; // or return a loading indicator, error message, etc.
   }
@@ -32,7 +34,7 @@ const Navbar = () => {
   const categories = Array.from(uniqueCollectionTypes);
 
 
-
+  console.log(categories, "categories")
 
   return (
     <div className="border-b">
