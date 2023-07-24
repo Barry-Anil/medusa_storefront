@@ -12,10 +12,10 @@ interface InfoProps {
 };
 
 const Info: React.FC<InfoProps> = ({ data }) => {
-//   const cart = useCart();
+  const cart = useCart();
 
   const onAddToCart = () => {
-    // cart.addItem(data);
+     cart.addItem(data);
   }
 
   console.log(data, "info card")
