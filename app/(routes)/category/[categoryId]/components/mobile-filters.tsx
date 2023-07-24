@@ -11,8 +11,8 @@ import IconButton from "@/components/ui/IconButton";
 import Button from "@/components/ui/Button";
 
 interface MobileFiltersProps {
-  sizes: Size[],
-  colors: Color[],
+  sizes: any,
+  colors: any,
 }
 
 const MobileFilters: React.FC<MobileFiltersProps> = ({
