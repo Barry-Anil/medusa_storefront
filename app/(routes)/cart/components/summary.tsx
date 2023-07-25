@@ -4,11 +4,12 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
-
 import useCart from "@/hooks/use-cart";
 import { toast } from "react-hot-toast";
 import Currency from "@/components/ui/Currency";
 import Button from "@/components/ui/Button";
+
+
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -33,15 +34,23 @@ const Summary = () => {
 
   //for checkout
   const onCheckout = async () => {
-    const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
-      productIds: items.map((item) => item.id)
-    });
+    // const response = await axios.post(`https://medusabackend-production-c032.up.railway.app/checkout`, {
+    //   productIds: items.map((item) => item.id)
+    // });
+    const response = axios.post("https://medusabackend-production-c032.up.railway.app/mailchimp/subscribe", {
+    "email": "example@gmail.com",
+    "data": {
+        "tags": ["customer"]
+    }
+}).then(response => console.log(response.data))
+.then(error => console.log(error))
 
-    window.location = response.data.url;
+    // window.location = response.data;
   }
 
   return ( 
-    <div
+   
+      <div
       className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
     >
       <h2 className="text-lg font-medium text-gray-900">
@@ -57,6 +66,7 @@ const Summary = () => {
         Checkout
       </Button>
     </div>
+
   );
 }
  

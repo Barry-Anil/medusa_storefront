@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import ModalProvider from "@/providers/modal-provider";
 import ToastProvider from "@/providers/toast-provider";
 
-import { MedusaProvider } from "medusa-react";
+import { CartProvider, MedusaProvider } from "medusa-react";
 import { QueryClient } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import HydrationZustand from "@/components/ZustandHydration"
@@ -36,6 +36,7 @@ export default function RootLayout({
           queryClientProviderProps={{ client: queryClient }}
           baseUrl="https://medusabackend-production-c032.up.railway.app"
         >
+          <CartProvider>
           <ModalProvider />
           <ToastProvider />
           <Navbar />
@@ -44,6 +45,7 @@ export default function RootLayout({
           </HydrationZustand>
           <Footer />
           <ReactQueryDevtools />
+          </CartProvider>
         </MedusaProvider>
       </body>
     </html>

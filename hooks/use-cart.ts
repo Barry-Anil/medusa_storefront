@@ -12,7 +12,7 @@ interface CartStore {
   removeAll: () => void;
 }
 
-const useCart = create(
+const useCartStore = create(
   persist<CartStore>((set, get) => ({
   items: [],
   addItem: (data: Product) => {
@@ -36,4 +36,4 @@ const useCart = create(
   storage: createJSONStorage(() => localStorage)
 }));
 
-export default useCart;
+export default useCartStore;

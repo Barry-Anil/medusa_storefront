@@ -1,19 +1,22 @@
 "use client";
 
 import Container from '@/components/ui/Container';
-import useCart from '@/hooks/use-cart';
+import useCartStore from '@/hooks/use-cart';
 import { useEffect, useState } from 'react';
 import CartItem from './components/cart-item';
 import Summary from './components/summary';
+import Medusa from "@medusajs/medusa-js"
+
 
 
 export const revalidate = 0;
 
 const CartPage = () => {
   const [isMounted, setIsMounted] = useState(false);
-  const cart = useCart();
+  const cart = useCartStore();
 
   console.log(cart, "carting")
+
 
   useEffect(() => {
     setIsMounted(true);
